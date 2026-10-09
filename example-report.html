@@ -1,0 +1,46 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>센서 데이터 품질 감사기</title><style>body{font:16px/1.6 system-ui;max-width:1000px;margin:30px auto;padding:20px;background:#101b2b;color:#eef7ff}pre{background:#192b40;padding:22px;border-radius:12px;white-space:pre-wrap}h1{color:#79e3c2}</style><h1>센서 데이터 품질 감사기</h1><p>오프라인 합성 예제 · 실물 장비 연결 없음</p><pre>{
+  &quot;valid&quot;: false,
+  &quot;streams&quot;: [
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;unique_samples&quot;: 4
+    }
+  ],
+  &quot;issues&quot;: [
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;time_s&quot;: 1,
+      &quot;reason&quot;: &quot;arrival_time_rollback&quot;
+    },
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;time_s&quot;: 1,
+      &quot;reason&quot;: &quot;conflicting_duplicate&quot;
+    },
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;time_s&quot;: 2,
+      &quot;reason&quot;: &quot;flatline&quot;,
+      &quot;count&quot;: 3
+    },
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;time_s&quot;: 7,
+      &quot;reason&quot;: &quot;gap&quot;,
+      &quot;gap_s&quot;: 5
+    },
+    {
+      &quot;asset_id&quot;: &quot;press-1&quot;,
+      &quot;sensor_id&quot;: &quot;temperature&quot;,
+      &quot;time_s&quot;: 7,
+      &quot;reason&quot;: &quot;rate_exceeded&quot;,
+      &quot;rate_per_s&quot;: 4.0
+    }
+  ],
+  &quot;policy&quot;: &quot;report_only_no_imputation&quot;
+}</pre>

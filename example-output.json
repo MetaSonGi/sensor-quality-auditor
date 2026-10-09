@@ -1,0 +1,46 @@
+{
+  "valid": false,
+  "streams": [
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "unique_samples": 4
+    }
+  ],
+  "issues": [
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "time_s": 1,
+      "reason": "arrival_time_rollback"
+    },
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "time_s": 1,
+      "reason": "conflicting_duplicate"
+    },
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "time_s": 2,
+      "reason": "flatline",
+      "count": 3
+    },
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "time_s": 7,
+      "reason": "gap",
+      "gap_s": 5
+    },
+    {
+      "asset_id": "press-1",
+      "sensor_id": "temperature",
+      "time_s": 7,
+      "reason": "rate_exceeded",
+      "rate_per_s": 4.0
+    }
+  ],
+  "policy": "report_only_no_imputation"
+}
